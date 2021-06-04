@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,20 @@
 		E205D9492669A63000AA9A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E205D9472669A63000AA9A03 /* LaunchScreen.storyboard */; };
 		E205D9542669A63000AA9A03 /* SmartNotepadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9532669A63000AA9A03 /* SmartNotepadAppTests.swift */; };
 		E205D95F2669A63100AA9A03 /* SmartNotepadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D95E2669A63100AA9A03 /* SmartNotepadAppUITests.swift */; };
+		E205D97C2669AA2600AA9A03 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D97B2669AA2600AA9A03 /* NotesViewController.swift */; };
+		E205D97E2669AA3C00AA9A03 /* NotesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D97D2669AA3C00AA9A03 /* NotesViewController+TableView.swift */; };
+		E205D9802669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D97F2669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift */; };
+		E205D9822669AA6100AA9A03 /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9812669AA6100AA9A03 /* NotesPresenter.swift */; };
+		E205D9842669AA7300AA9A03 /* NotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9832669AA7300AA9A03 /* NotesInteractor.swift */; };
+		E205D9892669AAFA00AA9A03 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9882669AAFA00AA9A03 /* NoteDetailsViewController.swift */; };
+		E205D98B2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D98A2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift */; };
+		E205D98D2669AB3500AA9A03 /* NoteDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D98C2669AB3500AA9A03 /* NoteDetailsPresenter.swift */; };
+		E205D98F2669AB4B00AA9A03 /* NoteDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D98E2669AB4B00AA9A03 /* NoteDetailsInteractor.swift */; };
+		E205D9932669AB7E00AA9A03 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9912669AB7E00AA9A03 /* NoteCell.swift */; };
+		E205D9942669AB7E00AA9A03 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E205D9922669AB7E00AA9A03 /* NoteCell.xib */; };
+		E205D9962669AB9600AA9A03 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9952669AB9600AA9A03 /* NoteModel.swift */; };
+		E205D9982669ABB200AA9A03 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9972669ABB200AA9A03 /* UIViewController.swift */; };
+		E205D99A2669ABC600AA9A03 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9992669ABC600AA9A03 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +73,20 @@
 		E205D95A2669A63100AA9A03 /* SmartNotepadAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartNotepadAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E205D95E2669A63100AA9A03 /* SmartNotepadAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartNotepadAppUITests.swift; sourceTree = "<group>"; };
 		E205D9602669A63100AA9A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E205D97B2669AA2600AA9A03 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		E205D97D2669AA3C00AA9A03 /* NotesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesViewController+TableView.swift"; sourceTree = "<group>"; };
+		E205D97F2669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		E205D9812669AA6100AA9A03 /* NotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
+		E205D9832669AA7300AA9A03 /* NotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesInteractor.swift; sourceTree = "<group>"; };
+		E205D9882669AAFA00AA9A03 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+		E205D98A2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailsViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		E205D98C2669AB3500AA9A03 /* NoteDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsPresenter.swift; sourceTree = "<group>"; };
+		E205D98E2669AB4B00AA9A03 /* NoteDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsInteractor.swift; sourceTree = "<group>"; };
+		E205D9912669AB7E00AA9A03 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		E205D9922669AB7E00AA9A03 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		E205D9952669AB9600AA9A03 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		E205D9972669ABB200AA9A03 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E205D9992669ABC600AA9A03 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ECCF90F49B47815EDAB45943 /* Pods-SmartNotepadApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartNotepadApp.debug.xcconfig"; path = "Target Support Files/Pods-SmartNotepadApp/Pods-SmartNotepadApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA515FFB9036F8BDE442F30 /* Pods-SmartNotepadAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartNotepadAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartNotepadAppTests/Pods-SmartNotepadAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +139,6 @@
 				FAA515FFB9036F8BDE442F30 /* Pods-SmartNotepadAppTests.debug.xcconfig */,
 				C45AFBB036A20920CB77C841 /* Pods-SmartNotepadAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,13 +167,15 @@
 		E205D93B2669A62D00AA9A03 /* SmartNotepadApp */ = {
 			isa = PBXGroup;
 			children = (
-				E205D93C2669A62D00AA9A03 /* AppDelegate.swift */,
-				E205D93E2669A62D00AA9A03 /* SceneDelegate.swift */,
+				E205D9742669A8B900AA9A03 /* Configuration */,
+				E205D9732669A8B100AA9A03 /* Core */,
+				E205D9722669A8A200AA9A03 /* Resourses */,
+				E205D9712669A89700AA9A03 /* Helper */,
+				E205D96F2669A87E00AA9A03 /* Model */,
+				E205D96E2669A87500AA9A03 /* View */,
+				E205D96D2669A86000AA9A03 /* Storyboard */,
+				E205D96C2669A84A00AA9A03 /* Scenes */,
 				E205D9402669A62D00AA9A03 /* ViewController.swift */,
-				E205D9422669A62D00AA9A03 /* Main.storyboard */,
-				E205D9452669A63000AA9A03 /* Assets.xcassets */,
-				E205D9472669A63000AA9A03 /* LaunchScreen.storyboard */,
-				E205D94A2669A63000AA9A03 /* Info.plist */,
 			);
 			path = SmartNotepadApp;
 			sourceTree = "<group>";
@@ -167,6 +196,162 @@
 				E205D9602669A63100AA9A03 /* Info.plist */,
 			);
 			path = SmartNotepadAppUITests;
+			sourceTree = "<group>";
+		};
+		E205D96C2669A84A00AA9A03 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9902669AB5C00AA9A03 /* TableViewCells */,
+				E205D9772669A9DF00AA9A03 /* NotesDetails */,
+				E205D9762669A9CE00AA9A03 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E205D96D2669A86000AA9A03 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9422669A62D00AA9A03 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E205D96E2669A87500AA9A03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E205D96F2669A87E00AA9A03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9952669AB9600AA9A03 /* NoteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E205D9712669A89700AA9A03 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9752669A90600AA9A03 /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E205D9722669A8A200AA9A03 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9452669A63000AA9A03 /* Assets.xcassets */,
+				E205D9472669A63000AA9A03 /* LaunchScreen.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		E205D9732669A8B100AA9A03 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E205D93C2669A62D00AA9A03 /* AppDelegate.swift */,
+				E205D93E2669A62D00AA9A03 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E205D9742669A8B900AA9A03 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E205D94A2669A63000AA9A03 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E205D9752669A90600AA9A03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9972669ABB200AA9A03 /* UIViewController.swift */,
+				E205D9992669ABC600AA9A03 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E205D9762669A9CE00AA9A03 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E205D97A2669A9FE00AA9A03 /* Interactor */,
+				E205D9792669A9F600AA9A03 /* Presenter */,
+				E205D9782669A9E900AA9A03 /* ViewControllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E205D9772669A9DF00AA9A03 /* NotesDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9872669AADE00AA9A03 /* Interactor */,
+				E205D9862669AAD600AA9A03 /* Presenter */,
+				E205D9852669AACC00AA9A03 /* ViewControllers */,
+			);
+			path = NotesDetails;
+			sourceTree = "<group>";
+		};
+		E205D9782669A9E900AA9A03 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E205D97B2669AA2600AA9A03 /* NotesViewController.swift */,
+				E205D97D2669AA3C00AA9A03 /* NotesViewController+TableView.swift */,
+				E205D97F2669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E205D9792669A9F600AA9A03 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9812669AA6100AA9A03 /* NotesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E205D97A2669A9FE00AA9A03 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9832669AA7300AA9A03 /* NotesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E205D9852669AACC00AA9A03 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9882669AAFA00AA9A03 /* NoteDetailsViewController.swift */,
+				E205D98A2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E205D9862669AAD600AA9A03 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E205D98C2669AB3500AA9A03 /* NoteDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E205D9872669AADE00AA9A03 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E205D98E2669AB4B00AA9A03 /* NoteDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E205D9902669AB5C00AA9A03 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E205D9912669AB7E00AA9A03 /* NoteCell.swift */,
+				E205D9922669AB7E00AA9A03 /* NoteCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +465,7 @@
 				E205D9492669A63000AA9A03 /* LaunchScreen.storyboard in Resources */,
 				E205D9462669A63000AA9A03 /* Assets.xcassets in Resources */,
 				E205D9442669A62D00AA9A03 /* Main.storyboard in Resources */,
+				E205D9942669AB7E00AA9A03 /* NoteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +593,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E205D99A2669ABC600AA9A03 /* UIView.swift in Sources */,
+				E205D97C2669AA2600AA9A03 /* NotesViewController.swift in Sources */,
+				E205D9932669AB7E00AA9A03 /* NoteCell.swift in Sources */,
+				E205D98F2669AB4B00AA9A03 /* NoteDetailsInteractor.swift in Sources */,
+				E205D9962669AB9600AA9A03 /* NoteModel.swift in Sources */,
 				E205D9412669A62D00AA9A03 /* ViewController.swift in Sources */,
+				E205D9892669AAFA00AA9A03 /* NoteDetailsViewController.swift in Sources */,
+				E205D9802669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift in Sources */,
+				E205D97E2669AA3C00AA9A03 /* NotesViewController+TableView.swift in Sources */,
+				E205D98B2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift in Sources */,
+				E205D9842669AA7300AA9A03 /* NotesInteractor.swift in Sources */,
+				E205D9822669AA6100AA9A03 /* NotesPresenter.swift in Sources */,
+				E205D98D2669AB3500AA9A03 /* NoteDetailsPresenter.swift in Sources */,
 				E205D93D2669A62D00AA9A03 /* AppDelegate.swift in Sources */,
 				E205D93F2669A62D00AA9A03 /* SceneDelegate.swift in Sources */,
+				E205D9982669ABB200AA9A03 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@ target 'SmartNotepadApp' do
 
   # Pods for SmartNotepadApp
  pod 'KRProgressHUD'
+ pod 'RealmSwift'
   target 'SmartNotepadAppTests' do
     inherit! :search_paths
     # Pods for testing

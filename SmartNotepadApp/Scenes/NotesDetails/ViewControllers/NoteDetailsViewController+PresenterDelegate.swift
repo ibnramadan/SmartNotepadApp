@@ -5,7 +5,7 @@
 //  Created by iMac on 04/06/2021.
 //
 
-mport Foundation
+import Foundation
 
 extension NoteDetailsViewController : NoteDetailsView {
     func showIndicator() {

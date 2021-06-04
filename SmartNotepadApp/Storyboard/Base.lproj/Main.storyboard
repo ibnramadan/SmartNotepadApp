@@ -16,7 +16,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PVx-QM-vVF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dn1-C8-sXq">
+                                <rect key="frame" x="90.5" y="348" width="233" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pn8-5X-Acm">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.text.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xz1-bt-NNw">
+                                                <rect key="frame" x="66.5" y="1.5" width="101.5" height="99"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="281-VI-RVR"/>
+                                                    <constraint firstAttribute="height" constant="100" id="TiH-HI-7oZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Begin by adding your first note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rA7-JL-4av">
+                                                <rect key="frame" x="0.0" y="100" width="233" height="67"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F44-OW-HYc">
+                                                <rect key="frame" x="84.5" y="167" width="64" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="yL4-c8-3Et"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Add">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNewNoteBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pis-JB-qWg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0tQ-m1-fFF"/>
+                                    <constraint firstItem="Pn8-5X-Acm" firstAttribute="leading" secondItem="Dn1-C8-sXq" secondAttribute="leading" id="1yu-9Y-vZ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pn8-5X-Acm" secondAttribute="trailing" id="kh0-Mg-vRe"/>
+                                    <constraint firstItem="Pn8-5X-Acm" firstAttribute="top" secondItem="Dn1-C8-sXq" secondAttribute="top" id="oJi-rC-bSH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pn8-5X-Acm" secondAttribute="bottom" id="yEQ-Fw-Hwm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PVx-QM-vVF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -28,11 +84,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVx-QM-vVF" secondAttribute="trailing" id="H2s-0r-Yxm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PVx-QM-vVF" secondAttribute="bottom" id="VuE-4u-5eG"/>
                             <constraint firstItem="PVx-QM-vVF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XkB-OF-j0F"/>
+                            <constraint firstItem="Dn1-C8-sXq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cJD-7u-6vf"/>
+                            <constraint firstItem="Dn1-C8-sXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zz7-Oc-PpT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="H0A-Rh-sQc">
-                        <barButtonItem key="rightBarButtonItem" title="Add Note" id="hTj-me-IDJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Note" id="hTj-me-IDJ">
+                            <connections>
+                                <action selector="addNewNoteBtnPressed:" destination="BYZ-38-t0r" id="irA-g9-I6q"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="NotesTableView" destination="PVx-QM-vVF" id="wnb-zS-am0"/>
+                        <outlet property="backGroundView" destination="Dn1-C8-sXq" id="hH1-Zz-Vog"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +159,9 @@
                                                                         <state key="normal" title="Add location">
                                                                             <color key="titleColor" systemColor="systemGray2Color"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="addLocationBtnPressed:" destination="WHJ-ue-K6p" eventType="touchUpInside" id="bMN-bu-0Us"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -122,6 +191,9 @@
                                                                         <state key="normal" title="Add photo">
                                                                             <color key="titleColor" systemColor="systemGray2Color"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="addPhotoBtnPressed:" destination="WHJ-ue-K6p" eventType="touchUpInside" id="rmQ-Qj-jQl"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -160,14 +232,28 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note Details" id="Wrl-U4-UGU">
                         <rightBarButtonItems>
-                            <barButtonItem title="Save" id="hmg-ig-KIb"/>
-                            <barButtonItem title="Delete" id="Oqi-3N-4pN"/>
+                            <barButtonItem title="Save" id="hmg-ig-KIb">
+                                <connections>
+                                    <action selector="saveNoteBtnPressed:" destination="WHJ-ue-K6p" id="Dm7-q1-9fV"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Delete" id="Oqi-3N-4pN">
+                                <connections>
+                                    <action selector="deleteNoteBtnPressed:" destination="WHJ-ue-K6p" id="eOs-Lq-eEq"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTView" destination="Glj-9e-dtP" id="C0C-ff-CiR"/>
+                        <outlet property="locationBtn" destination="Bp9-jp-WxZ" id="Wjk-Nf-TjM"/>
+                        <outlet property="noteImageBtn" destination="MRB-vX-dL0" id="6Mz-bP-R0T"/>
+                        <outlet property="titleTF" destination="sNl-Cu-Xub" id="gKj-hR-WP5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXJ-ym-tKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473.913043478261" y="39.508928571428569"/>
+            <point key="canvasLocation" x="2475" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mpd-VC-FMR">
@@ -203,11 +289,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhG-jG-E25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563.768115942029" y="39.508928571428569"/>
+            <point key="canvasLocation" x="1565" y="88"/>
         </scene>
     </scenes>
     <resources>
         <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

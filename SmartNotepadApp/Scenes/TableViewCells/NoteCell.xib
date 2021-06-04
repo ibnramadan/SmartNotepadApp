@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="NoteCell" customModule="SmartNotepadApp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="NoteCell" customModule="SmartNotepadApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -85,6 +85,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bodyL" destination="PbZ-yu-BXr" id="Rhs-ol-AxC"/>
+                <outlet property="locationImageV" destination="21M-lF-vI6" id="f8d-p5-6PR"/>
+                <outlet property="nearestL" destination="C5b-Nm-cpO" id="ADc-8a-GC8"/>
+                <outlet property="noteImageV" destination="sID-LA-W68" id="XyT-GA-Ykh"/>
+                <outlet property="titleL" destination="eM5-AA-I9q" id="Gqo-Q8-lCK"/>
+            </connections>
             <point key="canvasLocation" x="69.565217391304358" y="115.84821428571428"/>
         </tableViewCell>
     </objects>

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 class NoteDetailsViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -14,13 +14,16 @@ class NoteDetailsViewController: UIViewController {
     @IBOutlet weak var bodyTView: UITextView!
     @IBOutlet weak var locationBtn: UIButton!
     @IBOutlet weak var noteImageBtn: UIButton!
+    @IBOutlet weak var noteImageView: UIImageView!
     
     var presenter: NoteDetailsPresenter!
     var note:NoteModel?
-    fileprivate var noteLat:Double?
-    fileprivate var noteLong:Double?
-    fileprivate var noteURL:String?
-    fileprivate var noteAddress:String?
+    var noteLat:Double?
+    var noteLong:Double?
+     var noteURL:String?
+    var noteAddress:String?
+    var locationManager = CLLocationManager()
+    var imagePickerManager: ImagePickerManager?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,10 +34,12 @@ class NoteDetailsViewController: UIViewController {
     
 
     @IBAction func addLocationBtnPressed(_ sender: Any) {
+        setupLocation()
     }
     
 
     @IBAction func addPhotoBtnPressed(_ sender: Any) {
+        self.imagePickerManager?.checkPhotoLibraryPermission()
     }
     
     @IBAction func saveNoteBtnPressed(_ sender: Any) {
@@ -57,13 +62,16 @@ extension NoteDetailsViewController {
     
    func configureView() {
         
+    self.imagePickerManager = ImagePickerManager(imagePickerController: UIImagePickerController(), viewController: self, delegate: self)
     if note != nil {
         titleTF.text = note?.title
         bodyTView.text = note?.body
         if let location = note?.locationAddress {
             locationBtn.setTitle(location, for: .normal)
         }
-       
+        if let path = note?.imageURL, let url = URL(string: path) {
+            self.showSelectedImage(file: url)
+        }
     }else {
         bodyTView.delegate = self
         bodyTView.textColor = .lightGray

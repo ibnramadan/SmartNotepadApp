@@ -32,6 +32,12 @@
 		E205D9962669AB9600AA9A03 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9952669AB9600AA9A03 /* NoteModel.swift */; };
 		E205D9982669ABB200AA9A03 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9972669ABB200AA9A03 /* UIViewController.swift */; };
 		E205D99A2669ABC600AA9A03 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205D9992669ABC600AA9A03 /* UIView.swift */; };
+		E299A7AC26700BEB003BE1C5 /* UIIMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299A7AB26700BEB003BE1C5 /* UIIMage.swift */; };
+		E2DBFAF8266D869500BF891B /* NoteDetailsViewController+LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DBFAF7266D869500BF891B /* NoteDetailsViewController+LocationDelegate.swift */; };
+		E2DBFAFB266D8EF700BF891B /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DBFAFA266D8EF700BF891B /* ImagePickerManager.swift */; };
+		E2DBFAFD266D90B500BF891B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DBFAFC266D90B500BF891B /* Helper.swift */; };
+		E2DBFAFF266D90FD00BF891B /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DBFAFE266D90FD00BF891B /* UIApplication.swift */; };
+		E2DBFB01266D929B00BF891B /* NoteDetailsViewController+ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DBFB00266D929B00BF891B /* NoteDetailsViewController+ImagePickerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +93,12 @@
 		E205D9952669AB9600AA9A03 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		E205D9972669ABB200AA9A03 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E205D9992669ABC600AA9A03 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E299A7AB26700BEB003BE1C5 /* UIIMage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIMage.swift; sourceTree = "<group>"; };
+		E2DBFAF7266D869500BF891B /* NoteDetailsViewController+LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailsViewController+LocationDelegate.swift"; sourceTree = "<group>"; };
+		E2DBFAFA266D8EF700BF891B /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		E2DBFAFC266D90B500BF891B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E2DBFAFE266D90FD00BF891B /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E2DBFB00266D929B00BF891B /* NoteDetailsViewController+ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailsViewController+ImagePickerDelegate.swift"; sourceTree = "<group>"; };
 		ECCF90F49B47815EDAB45943 /* Pods-SmartNotepadApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartNotepadApp.debug.xcconfig"; path = "Target Support Files/Pods-SmartNotepadApp/Pods-SmartNotepadApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA515FFB9036F8BDE442F30 /* Pods-SmartNotepadAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartNotepadAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartNotepadAppTests/Pods-SmartNotepadAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +179,7 @@
 		E205D93B2669A62D00AA9A03 /* SmartNotepadApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2DBFAF9266D8EE400BF891B /* Utilites */,
 				E205D9742669A8B900AA9A03 /* Configuration */,
 				E205D9732669A8B100AA9A03 /* Core */,
 				E205D9722669A8A200AA9A03 /* Resourses */,
@@ -235,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				E205D9752669A90600AA9A03 /* Extensions */,
+				E2DBFAFC266D90B500BF891B /* Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -269,7 +283,9 @@
 			isa = PBXGroup;
 			children = (
 				E205D9972669ABB200AA9A03 /* UIViewController.swift */,
+				E2DBFAFE266D90FD00BF891B /* UIApplication.swift */,
 				E205D9992669ABC600AA9A03 /* UIView.swift */,
+				E299A7AB26700BEB003BE1C5 /* UIIMage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				E205D9882669AAFA00AA9A03 /* NoteDetailsViewController.swift */,
+				E2DBFAF7266D869500BF891B /* NoteDetailsViewController+LocationDelegate.swift */,
+				E2DBFB00266D929B00BF891B /* NoteDetailsViewController+ImagePickerDelegate.swift */,
 				E205D98A2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift */,
 			);
 			path = ViewControllers;
@@ -352,6 +370,14 @@
 				E205D9922669AB7E00AA9A03 /* NoteCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E2DBFAF9266D8EE400BF891B /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				E2DBFAFA266D8EF700BF891B /* ImagePickerManager.swift */,
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,17 +624,23 @@
 				E205D9932669AB7E00AA9A03 /* NoteCell.swift in Sources */,
 				E205D98F2669AB4B00AA9A03 /* NoteDetailsInteractor.swift in Sources */,
 				E205D9962669AB9600AA9A03 /* NoteModel.swift in Sources */,
+				E2DBFAFB266D8EF700BF891B /* ImagePickerManager.swift in Sources */,
 				E205D9412669A62D00AA9A03 /* ViewController.swift in Sources */,
 				E205D9892669AAFA00AA9A03 /* NoteDetailsViewController.swift in Sources */,
+				E2DBFAFF266D90FD00BF891B /* UIApplication.swift in Sources */,
+				E299A7AC26700BEB003BE1C5 /* UIIMage.swift in Sources */,
+				E2DBFAFD266D90B500BF891B /* Helper.swift in Sources */,
 				E205D9802669AA4A00AA9A03 /* NotesViewController+PresenterDelegate.swift in Sources */,
 				E205D97E2669AA3C00AA9A03 /* NotesViewController+TableView.swift in Sources */,
 				E205D98B2669AB2000AA9A03 /* NoteDetailsViewController+PresenterDelegate.swift in Sources */,
 				E205D9842669AA7300AA9A03 /* NotesInteractor.swift in Sources */,
 				E205D9822669AA6100AA9A03 /* NotesPresenter.swift in Sources */,
 				E205D98D2669AB3500AA9A03 /* NoteDetailsPresenter.swift in Sources */,
+				E2DBFAF8266D869500BF891B /* NoteDetailsViewController+LocationDelegate.swift in Sources */,
 				E205D93D2669A62D00AA9A03 /* AppDelegate.swift in Sources */,
 				E205D93F2669A62D00AA9A03 /* SceneDelegate.swift in Sources */,
 				E205D9982669ABB200AA9A03 /* UIViewController.swift in Sources */,
+				E2DBFB01266D929B00BF891B /* NoteDetailsViewController+ImagePickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

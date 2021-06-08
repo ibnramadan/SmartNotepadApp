@@ -19,7 +19,7 @@ class NoteDetailsInteractor{
             newNote.latitude = lat
             newNote.longitude = long
             newNote.locationAddress = noteAddress
-            newNote.image = noteImageURL
+            newNote.imageURL = noteImageURL
             newNote.createdAt = Date()
             realm.add(newNote)
             }
@@ -34,7 +34,7 @@ class NoteDetailsInteractor{
                 note.latitude = lat
                 note.longitude = long
                 note.locationAddress = noteAddress
-                note.image = noteImageURL
+                note.imageURL = noteImageURL
                 note.locationAddress = noteAddress
                 note.createdAt = Date()
           

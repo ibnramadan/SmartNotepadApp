@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import CoreLocation
 protocol NoteView: AnyObject {
     func showIndicator()
     func hideIndicator()
@@ -15,7 +16,7 @@ protocol NoteView: AnyObject {
     func EmptyData()
     func showError(error: String)
     func selectedNoteSuccess(Note : NoteModel)
-
+    
 }
 
 protocol NoteCellView {
@@ -24,27 +25,27 @@ protocol NoteCellView {
     func displayNoteNearestL()
     func displayNoteLocationImage()
     func displayNoteImage()
-
+    
 }
 
 
 class NotesViewControllerPresenter {
-      private weak var view: NoteView?
-      private let interactor = NoteInteractor()
-//      private var notes = [NoteModel]()
-      private var notes : Results<NoteModel>?
-      init(view: NoteView) {
-          self.view = view
-      }
-      
-      func viewDidLoad() {
-
+    private weak var view: NoteView?
+    private let interactor = NoteInteractor()
+    //      private var notes = [NoteModel]()
+    private var notes : Results<NoteModel>?
+    init(view: NoteView) {
+        self.view = view
+    }
+    
+    func viewDidLoad() {
+        
         getNotes()
-      }
-      
+    }
+    
     
     func getNotes() {
-   
+        
         interactor.getNotes { result in
             self.notes = result
             if self.notes?.count ?? 0 != 0 {
@@ -55,11 +56,22 @@ class NotesViewControllerPresenter {
         } failureHandler: { Error in
             self.view?.showError(error: "Error")
         }
-
         
-
+        
     }
     
+    
+    func sortNotes(location:CLLocation){
+        let realm = try! Realm()
+        getNotes()
+        try! realm.write {
+            notes?.forEach { (note) in
+                note.distanceFromDevice = location.distance(from: CLLocation(latitude: note.latitude, longitude: note.longitude))
+            }
+        }
+        notes = realm.objects(NoteModel.self).sorted(by: [SortDescriptor(keyPath: "distanceFromDevice", ascending: true),SortDescriptor(keyPath: "createdAt", ascending: false)])
+        self.view?.fetchingDataSuccess()
+    }
     func getNotesCount() -> Int {
         return notes?.count ?? 0
     }
@@ -74,14 +86,14 @@ class NotesViewControllerPresenter {
         cell.displayNoteLocationImage()
         cell.displayNoteImage()
     }
-
+    
     
     func didSelectRow(cell: NoteCellView,for index: Int) {
         if let note = notes?[index] {
-        view?.selectedNoteSuccess(Note: note)
+            view?.selectedNoteSuccess(Note: note)
         }
     }
-  
+    
     
 }
 

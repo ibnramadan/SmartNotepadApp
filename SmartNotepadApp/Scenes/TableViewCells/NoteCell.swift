@@ -9,9 +9,7 @@
 import UIKit
 
 class NoteCell: UITableViewCell  , NoteCellView{
-
     
-
     
     //MARK:- IBOutlets
     @IBOutlet weak var titleL: UILabel!
@@ -24,10 +22,10 @@ class NoteCell: UITableViewCell  , NoteCellView{
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 
 extension NotesViewController : NoteView {
-  
+    
     func showIndicator() {
         self.showLoader()
     }
@@ -19,6 +19,8 @@ extension NotesViewController : NoteView {
     }
     
     func fetchingDataSuccess() {
+        NotesTableView.isHidden = false
+        backGroundView.isHidden = true
         self.NotesTableView.reloadData()
     }
     func EmptyData() {
@@ -36,7 +38,7 @@ extension NotesViewController : NoteView {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-   
-
+    
+    
 }
 

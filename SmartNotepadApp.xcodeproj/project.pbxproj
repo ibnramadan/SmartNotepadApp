@@ -215,8 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				E205D9902669AB5C00AA9A03 /* TableViewCells */,
-				E205D9772669A9DF00AA9A03 /* NotesDetails */,
 				E205D9762669A9CE00AA9A03 /* Home */,
+				E205D9772669A9DF00AA9A03 /* NotesDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
